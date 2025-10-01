@@ -63,10 +63,10 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 20px;
-            max-width: 1400px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            padding: 40px;
+            max-width: 1600px;
             margin: 0 auto;
         }
 
@@ -96,18 +96,20 @@
 
         .card-banner {
             width: 100%;
-            height: 150px;
+            height: 200px;
             object-fit: cover;
             display: block;
+            border-bottom: 1px solid #333;
         }
 
         .card-content {
-            padding: 15px;
+            padding: 25px;
             text-align: center;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            background: linear-gradient(to bottom, #111, #000);
         }
 
         .card-title {
@@ -127,29 +129,19 @@
         .card {
             position: relative;
             border-radius: 10px;
-            background: #000;
-            padding: 2px;
+            background: #111;
             overflow: hidden;
+            border: 1px solid #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
-            background-size: 200% 200%;
-            animation: moveGradient 2s linear infinite;
-            z-index: -1;
-            border-radius: 12px;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
         }
 
         .card-inner {
-            background: #000;
-            border-radius: 8px;
-            overflow: hidden;
+            background: #111;
             height: 100%;
             position: relative;
             z-index: 1;
@@ -194,6 +186,7 @@
 
             <a href="People/user/Cherry/index.html" class="card">
                 <div class="card-inner">
+                    <img src="Asset/cherryesex/Cherryonph.gif" alt="Cherry" class="card-banner">
                     <div class="card-content">
                         <h3 class="card-title">Cherry</h3>
                         <p class="card-desc">Banned from DB for showing her pussy to moderators. Lolcow.</p>
@@ -203,6 +196,7 @@
 
             <a href="People/user/Cryption/index.html" class="card">
                 <div class="card-inner">
+                    <img src="Asset/Cryption/mrrobot.webp" alt="Cryption" class="card-banner">
                     <div class="card-content">
                         <h3 class="card-title">Cryption</h3>
                         <p class="card-desc">Closeted troon that glazed LC while nuking discord servers at school and rating loli hentai.</p>
@@ -215,6 +209,7 @@
             <!-- CARD 10 -->
             <a href="People/user/Evakitty/index.html" class="card">
                 <div class="card-inner">
+                    <img src="Asset/Evakitty/imdead.webp" alt="Evakitty" class="card-banner">
                     <div class="card-content">
                         <h3 class="card-title">Evakitty</h3>
                         <p class="card-desc">Eva Dögg Heðinsdottir, 30+ yr old erper that cant keep their hands off kids</p>
@@ -225,6 +220,7 @@
                <!-- CARD 11 -->
             <a href="People/user/AshDemonic/index.html" class="card">
                 <div class="card-inner">
+                    <img src="Asset/ashdemonic/screenshotyes.webp" alt="Ash Demonic" class="card-banner">
                     <div class="card-content">
                         <h3 class="card-title">Ash Demonic</h3>
                         <p class="card-desc">Fat com whale that keeps coming back after being caught dming and sexting as many minors as she possible can.</p>
@@ -235,6 +231,7 @@
                   <!-- CARD 12 -->
             <a href="People/user/Ravensthebaddie/index.html" class="card">
                 <div class="card-inner">
+                    <img src="Asset/Ravensthebaddie/ravenacc.webp" alt="Ravensthebaddie" class="card-banner">
                     <div class="card-content">
                         <h3 class="card-title">Ravensthebaddie</h3>
                         <p class="card-desc">Gigantic lard that preaches "romeo and juliet" laws.</p>
@@ -245,6 +242,7 @@
                   <!-- CARD 13 -->
             <a href="People/user/QueenV/index.html" class="card">
                 <div class="card-inner">
+                    <img src="Asset/QueenV/queeenv3.webp" alt="QueenV" class="card-banner">
                     <div class="card-content">
                         <h3 class="card-title">QueenV</h3>
                         <p class="card-desc">Thinks Its not child porn if they're doing it on VRChat.</p>
@@ -255,6 +253,7 @@
                   <!-- CARD 14 -->
             <a href="People/user/Silverdragongod/index.html" class="card">
                 <div class="card-inner">
+                    <img src="Asset/Silverdragongod/nastysilver.webp" alt="Silverdragongod" class="card-banner">
                     <div class="card-content">
                         <h3 class="card-title">Silverdragongod</h3>
                         <p class="card-desc">Nasty Pred That Loves Them 12+ years.</p>
