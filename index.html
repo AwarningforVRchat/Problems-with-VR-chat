@@ -1,68 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VRChat Community Warning List</title>
-  <link rel="stylesheet" href="Styles/styles.css" />
-  <meta name="description" content="Community maintained list of problematic VRChat users">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRChat Warning List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .logo {
+            max-width: 300px;
+            margin: 0 auto 20px;
+            background: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(98, 0, 255, 0.3);
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .header-text {
+            color: #8a2be2;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: white;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .rainbow-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+            background-size: 200% 100%;
+            animation: moveGradient 2s linear infinite;
+        }
+
+        @keyframes moveGradient {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card-desc {
+            color: #ccc;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+    </style>
 </head>
 <body>
-  <!-- Warning Banner -->
-  <div class="warning-banner">
-    ⚠️ WARNING: This site contains information about problematic behavior in the VRChat community.
-  </div>
+    <canvas id="constellation"></canvas>
 
-  <!-- Fixed Header -->
-  <header class="fixed-header">
-    <div class="logo">
-      <img src="Asset/logo.webp" alt="Site Logo" />
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="Asset/logo.webp" alt="VRChat Warning">
+            </div>
+            <div class="header-text">Verified Autistic Wierdos of VRChat located here!!!</div>
+            <div class="header-text">Got a problem? Talk to Tupper!</div>
+        </div>
+
+        <div class="grid">
+
+            <a href="/People/user/Price/index.html" class="card">
+                <div class="rainbow-border"></div>
+                <img src="Asset/pricecherry/pricecherry.webp" alt="Price">
+                <div class="card-content">
+                    <h3 class="card-title">Price</h3>
+                    <p class="card-desc">Owner of Coffin / Laughing Coffin / CP lover / Child Extorter</p>
+                </div>
+            </a>
+
+            <a href="/People/user/AzukiFumiko/index.html" class="card">
+                <div class="rainbow-border"></div>
+                <img src="Asset/ashdemonic/screenshotyes.webp" alt="Azuki Fumiko">
+                <div class="card-content">
+                    <h3 class="card-title">Azuki Fumiko</h3>
+                    <p class="card-desc">Owner of FBT haven, has little anime girls on his car</p>
+                </div>
+            </a>
+
+            <a href="/People/user/TechGangster/index.html" class="card">
+                <div class="rainbow-border"></div>
+                <img src="Asset/Cryption/buff.webp" alt="Tech Gangster">
+                <div class="card-content">
+                    <h3 class="card-title">Tech Gangster</h3>
+                    <p class="card-desc">Crackhead, Pedophile, Drug addict</p>
+                </div>
+            </a>
+        </div>
     </div>
-    <div class="logo-subtext">Community Maintained Warning List</div>
-    <div class="logo-subtext">For issues, please contact VRChat Trust & Safety team</div>
-  </header>
 
-  <!-- Fixed Header with Logo and Subtext -->
-  <div class="fixed-header">
-    <div class="logo">
-      <img src="assets/landingpage/logo.png" alt="Logo" />
-    </div>
-    <div class="logo-subtext">Verified Autistic Wierdos of VRChat located here!!!</div>
-    <div class="logo-subtext">Got a problem? Talk to Tupper!</div>
-  </div>
+    <script>
+        const canvas = document.getElementById('constellation');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
 
-  <!-- Main Content -->
-  <main class="content-container">
-    <div class="card-container">
-        <!-- USER CARD -->
-        <div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="/People/user/Price/index.html" class="card">
-          <img src="assets/Price/pic.png" alt="Price" />
-          <div class="caption">Price</div>
-          <p class="desc">Owner of Coffin / Laughing Coffin / CP lover / Child Extorter.</p>
-        </a>
-      </div>
+        // Constellation parameters
+        const stars = [];
+        const numStars = 100;
+        const connectionRadius = 100;
+        const starRadius = 1;
+        const starSpeed = 0.2;
 
-      <!-- CARD 2 -->
-      <div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="/People/user/AzukiFumiko/index.html" class="card">
-          <img src="assets/AzukiFumiko/pic.png" alt="Azuki Fumiko" />
-          <div class="caption">Azuki Fumiko</div>
-          <p class="desc">Owner of FBT haven, has little anime girls on his car.</p>
-        </a>
-      </div>
+        // Star object
+        class Star {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * starSpeed;
+                this.vy = (Math.random() - 0.5) * starSpeed;
+            }
 
-      <!-- CARD 3 -->
-      <div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="/People/user/TechGangster/index.html" class="card">
-          <img src="assets/TechGangster/techgangster.png" alt="User 3" />
-          <div class="caption">Tech Gangster</div>
-          <p class="desc">Crackhead, Pedophile, Drug addict.</p>
-        </a>
-      </div>
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Bounce off edges
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, starRadius, 0, Math.PI * 2);
+                ctx.fillStyle = '#fff';
+                ctx.fill();
+            }
+        }
+
+        // Create stars
+        for (let i = 0; i < numStars; i++) {
+            stars.push(new Star());
+        }
+
+        // Animation loop
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            // Update and draw stars
+            stars.forEach(star => {
+                star.update();
+                star.draw();
+            });
+
+            // Draw connections
+            ctx.beginPath();
+            for (let i = 0; i < stars.length; i++) {
+                for (let j = i + 1; j < stars.length; j++) {
+                    const dx = stars[i].x - stars[j].x;
+                    const dy = stars[i].y - stars[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < connectionRadius) {
+                        ctx.moveTo(stars[i].x, stars[i].y);
+                        ctx.lineTo(stars[j].x, stars[j].y);
+                    }
+                }
+            }
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.stroke();
+
+            requestAnimationFrame(animate);
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        // Start animation
+        animate();
+    </script>
+</body>
+</html>
 
       <!-- CARD 4 -->
       <!--<div class="card-wrapper">
