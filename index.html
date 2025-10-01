@@ -158,30 +158,20 @@
 
         <div class="grid">
 
-            <a href="./People/user/Price/index.html" class="card">
+            <a href="Problems-with-VR-chat/People/user/Price/index.html" class="card">
                 <div class="rainbow-border"></div>
                 <img src="Asset/pricecherry/pricecherry.webp" alt="Price" class="card-banner">
-                <img src="Asset/pricecherry/pricecherry.webp" alt="Price Profile" class="profile-pic">
+                <img src="Asset/pricecherry/pic.webp" alt="Price Profile" class="profile-pic">
                 <div class="card-content">
                     <h3 class="card-title">Price</h3>
                     <p class="card-desc">Owner of Coffin / Laughing Coffin / CP lover / Child Extorter</p>
                 </div>
             </a>
 
-            <a href="./People/user/AzukiFumiko/index.html" class="card">
+            <a href="Problems-with-VR-chat/People/user/TechGangster/index.html" class="card">
                 <div class="rainbow-border"></div>
-                <img src="Asset/ashdemonic/screenshotyes.webp" alt="Azuki Fumiko" class="card-banner">
-                <img src="Asset/ashdemonic/screenshotyes.webp" alt="Azuki Fumiko Profile" class="profile-pic">
-                <div class="card-content">
-                    <h3 class="card-title">Azuki Fumiko</h3>
-                    <p class="card-desc">Owner of FBT haven, has little anime girls on his car</p>
-                </div>
-            </a>
-
-            <a href="./People/user/TechGangster/index.html" class="card">
-                <div class="rainbow-border"></div>
-                <img src="Asset/Cryption/buff.webp" alt="Tech Gangster" class="card-banner">
-                <img src="Asset/Cryption/buff.webp" alt="Tech Gangster Profile" class="profile-pic">
+                <img src="Asset/Tech/techgangster.jpg" alt="Tech Gangster" class="card-banner">
+                <img src="Asset/Tech/techgangster.jpg" alt="Tech Gangster Profile" class="profile-pic">
                 <div class="card-content">
                     <h3 class="card-title">Tech Gangster</h3>
                     <p class="card-desc">Crackhead, Pedophile, Drug addict</p>
@@ -189,155 +179,29 @@
             </a>
         </div>
     </div>
-
-    <script>
-        const canvas = document.getElementById('constellation');
-        const ctx = canvas.getContext('2d');
-        let width = canvas.width = window.innerWidth;
-        let height = canvas.height = window.innerHeight;
-
-        // Constellation parameters
-        const stars = [];
-        const numStars = 100;
-        const connectionRadius = 100;
-        const starRadius = 1;
-        const starSpeed = 0.2;
-
-        // Star object
-        class Star {
-            constructor() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * starSpeed;
-                this.vy = (Math.random() - 0.5) * starSpeed;
-            }
-
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-
-                // Bounce off edges
-                if (this.x < 0 || this.x > width) this.vx *= -1;
-                if (this.y < 0 || this.y > height) this.vy *= -1;
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, starRadius, 0, Math.PI * 2);
-                ctx.fillStyle = '#fff';
-                ctx.fill();
-            }
-        }
-
-        // Create stars
-        for (let i = 0; i < numStars; i++) {
-            stars.push(new Star());
-        }
-
-        // Animation loop
-        function animate() {
-            ctx.clearRect(0, 0, width, height);
-
-            // Update and draw stars
-            stars.forEach(star => {
-                star.update();
-                star.draw();
-            });
-
-            // Draw connections
-            ctx.beginPath();
-            for (let i = 0; i < stars.length; i++) {
-                for (let j = i + 1; j < stars.length; j++) {
-                    const dx = stars[i].x - stars[j].x;
-                    const dy = stars[i].y - stars[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < connectionRadius) {
-                        ctx.moveTo(stars[i].x, stars[i].y);
-                        ctx.lineTo(stars[j].x, stars[j].y);
-                    }
-                }
-            }
-            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
-            ctx.stroke();
-
-            requestAnimationFrame(animate);
-        }
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-        });
-
-        // Start animation
-        animate();
-    </script>
-</body>
 </html>
 
-      <!-- CARD 4 -->
-      <!--<div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="/People/user/Sin/index.html" class="card">
-          <img src="assets/user4/pic.jpg" alt="User 4" />
-          <div class="caption">Sin</div>
-          <p class="desc">Input discription of sin here</p>
-        </a>
-      </div>-->
       
-      <!-- CARD 5 -->
-      <!--<div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="/People/user/Rome/index.html" class="card">
-          <img src="assets/user5/pic.jpg" alt="User 5" />
-          <div class="caption">Rome</div>
-          <p class="desc">Discription for rome here</p>
-        </a>
-      </div>-->
 
-      <!-- CARD 6 -->
-      <!-- Template for new cards
-      <a href="People/user/USERNAME/index.html" class="card">
-          <div class="rainbow-border"></div>
-          <img src="Asset/USERNAME/banner.webp" alt="USERNAME Banner" class="card-banner">
-          <img src="Asset/USERNAME/profile.webp" alt="USERNAME Profile" class="profile-pic">
-          <div class="card-content">
-              <h3 class="card-title">USERNAME</h3>
-              <p class="card-desc">Description goes here</p>
-          </div>
-      </a>
-      -->
+            <a href="Problems-with-VR-chat/People/user/Cherry/index.html" class="card">
+                <div class="rainbow-border"></div>
+                <img src="Asset/cherryesex/cherryesex.mp4" alt="Cherry" class="card-banner">
+                <img src="Asset/cherryesex/Cherryonph.gif" alt="Cherry Profile" class="profile-pic">
+                <div class="card-content">
+                    <h3 class="card-title">Cherry</h3>
+                    <p class="card-desc">Banned from DB for showing her pussy to moderators. Lolcow.</p>
+                </div>
+            </a>
 
-      <!-- CARD 7 -->
-      <!--<div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="/People/user/Fatherhoodie/index.html" class="card">
-          <img src="assets/user7/pic.jpg" alt="User 7" />
-          <div class="caption">FatherHoodie</div>
-          <p class="desc">FatherHoodie discription here</p>
-        </a>
-      </div>-->
-
-      <!-- CARD 8 -->
-      <div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="./People/user/Cherry/index.html" class="card">
-          <img src="./Asset/Cherry/cherryface.png" alt="Cherry" />
-          <div class="caption">Cherry</div>
-          <p class="desc">Banned from DB for showing her pussy to moderators. Lolcow. </p>
-        </a>
-      </div>
-
-      <!-- CARD 9 -->
-      <div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="./People/user/Cryption/index.html" class="card">
-          <img src="./Asset/Cryption/grillz.webp" alt="Cryption" />
-          <div class="caption">Cryption</div>
-          <p class="desc">Closeted troon that glazed LC while nuking discord servers at school and rating loli hentai.</p>
-        </a>
-      </div>
+            <a href="Problems-with-VR-chat/People/user/Cryption/index.html" class="card">
+                <div class="rainbow-border"></div>
+                <img src="Asset/Cryption/cryptiondance.mov" alt="Cryption" class="card-banner">
+                <img src="Asset/Cryption/grillz.webp" alt="Cryption Profile" class="profile-pic">
+                <div class="card-content">
+                    <h3 class="card-title">Cryption</h3>
+                    <p class="card-desc">Closeted troon that glazed LC while nuking discord servers at school and rating loli hentai.</p>
+                </div>
+            </a>
 
       <!-- CARD 9 -->
       <!--<div class="card-wrapper">
@@ -350,54 +214,59 @@
       </div>-->
       
             <!-- CARD 10 -->
-      <div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="./People/user/Evakitty/index.html" class="card">
-          <img src="./Asset/Evakitty/evaface.webp" alt="Evakitty" />
-          <div class="caption">Evakitty</div>
-          <p class="desc">Eva Dögg Heðinsdottir, 30+ yr old erper that cant keep their hands off kids</p>
-        </a>
-      </div>
+            <a href="Problems-with-VR-chat/People/user/Evakitty/index.html" class="card">
+                <div class="rainbow-border"></div>
+                <img src="Asset/Evakitty/imdead.webp" alt="Evakitty" class="card-banner">
+                <img src="Asset/Evakitty/evaface.webp" alt="Evakitty Profile" class="profile-pic">
+                <div class="card-content">
+                    <h3 class="card-title">Evakitty</h3>
+                    <p class="card-desc">Eva Dögg Heðinsdottir, 30+ yr old erper that cant keep their hands off kids</p>
+                </div>
+            </a>
 
                <!-- CARD 11 -->
-      <div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="./People/user/AshDemonic/index.html" class="card">
-          <img src="./Asset/ashdemonic/ashdemonicface.webp" alt="Ash Demonic" />
-          <div class="caption">Ash Demonic </div>
-          <p class="desc">Fat com whale that keeps coming back after being caught dming and sexting as many minors as she possible can.</p>
-        </a>
-      </div>
+            <a href="Problems-with-VR-chat/People/user/AshDemonic/index.html" class="card">
+                <div class="rainbow-border"></div>
+                <img src="Asset/ashdemonic/ashdemonic.mp4" alt="Ash Demonic" class="card-banner">
+                <img src="Asset/ashdemonic/screenshotyes.webp" alt="Ash Demonic Profile" class="profile-pic">
+                <div class="card-content">
+                    <h3 class="card-title">Ash Demonic</h3>
+                    <p class="card-desc">Fat com whale that keeps coming back after being caught dming and sexting as many minors as she possible can.</p>
+                </div>
+            </a>
 
                   <!-- CARD 12 -->
-      <div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="./People/user/Ravensthebaddie/index.html" class="card">
-          <img src="./Asset/Ravensthebaddie/ravenface.webp" alt="Ravensthebaddie" />
-          <div class="caption">Ravensthebaddie</div>
-          <p class="desc">Gigantic lard that preaches "romeo and juliet" laws.</p>
-        </a>
-      </div>
+            <a href="Problems-with-VR-chat/People/user/Ravensthebaddie/index.html" class="card">
+                <div class="rainbow-border"></div>
+                <img src="Asset/Ravensthebaddie/ravensnap.mov" alt="Ravensthebaddie" class="card-banner">
+                <img src="Asset/Ravensthebaddie/ravenacc.webp" alt="Ravensthebaddie Profile" class="profile-pic">
+                <div class="card-content">
+                    <h3 class="card-title">Ravensthebaddie</h3>
+                    <p class="card-desc">Gigantic lard that preaches "romeo and juliet" laws.</p>
+                </div>
+            </a>
 
                   <!-- CARD 13 -->
-      <div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="./People/user/QueenV/index.html" class="card">
-          <img src="./Asset/QueenV/QueenV.webp" alt="QueenV" />
-          <div class="caption">QueenV</div>
-          <p class="desc">Thinks Its not child porn if they're doing it on VRChat.</p>
-        </a>
-      </div>
+            <a href="Problems-with-VR-chat/People/user/QueenV/index.html" class="card">
+                <div class="rainbow-border"></div>
+                <img src="Asset/QueenV/QueenVlol.mp4" alt="QueenV" class="card-banner">
+                <img src="Asset/QueenV/queeenv3.webp" alt="QueenV Profile" class="profile-pic">
+                <div class="card-content">
+                    <h3 class="card-title">QueenV</h3>
+                    <p class="card-desc">Thinks Its not child porn if they're doing it on VRChat.</p>
+                </div>
+            </a>
 
                   <!-- CARD 14 -->
-      <div class="card-wrapper">
-        <div class="clown-wig"></div>
-        <a href="./People/user/Silverdragongod/index.html" class="card">
-          <img src="./Asset/Silverdragongod/silverface.webp" alt="Silverdragongod" />
-          <div class="caption">Silverdragongod</div>
-          <p class="desc">Nasty Pred That Loves Them 12+ years.</p>
-        </a>
-      </div>
+            <a href="Problems-with-VR-chat/People/user/Silverdragongod/index.html" class="card">
+                <div class="rainbow-border"></div>
+                <img src="Asset/Silverdragongod/dclmao.webp" alt="Silverdragongod" class="card-banner">
+                <img src="Asset/Silverdragongod/nastysilver.webp" alt="Silverdragongod Profile" class="profile-pic">
+                <div class="card-content">
+                    <h3 class="card-title">Silverdragongod</h3>
+                    <p class="card-desc">Nasty Pred That Loves Them 12+ years.</p>
+                </div>
+            </a>
 
                   <!-- CARD 15 -->
       <!--<div class="card-wrapper">
@@ -461,6 +330,48 @@
         </a>
       </div>-->
         <!-- Add more user cards here -->
+         <!-- CARD 4 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Sin/index.html" class="card">
+          <img src="assets/user4/pic.jpg" alt="User 4" />
+          <div class="caption">Sin</div>
+          <p class="desc">Input discription of sin here</p>
+        </a>
+      </div>-->
+      
+      <!-- CARD 5 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Rome/index.html" class="card">
+          <img src="assets/user5/pic.jpg" alt="User 5" />
+          <div class="caption">Rome</div>
+          <p class="desc">Discription for rome here</p>
+        </a>
+      </div>-->
+
+      <!-- CARD 6 -->
+      <!-- Template for new cards
+      <a href="People/user/USERNAME/index.html" class="card">
+          <div class="rainbow-border"></div>
+          <img src="Asset/USERNAME/banner.webp" alt="USERNAME Banner" class="card-banner">
+          <img src="Asset/USERNAME/profile.webp" alt="USERNAME Profile" class="profile-pic">
+          <div class="card-content">
+              <h3 class="card-title">USERNAME</h3>
+              <p class="card-desc">Description goes here</p>
+          </div>
+      </a>
+      -->
+
+      <!-- CARD 7 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Fatherhoodie/index.html" class="card">
+          <img src="assets/user7/pic.jpg" alt="User 7" />
+          <div class="caption">FatherHoodie</div>
+          <p class="desc">FatherHoodie discription here</p>
+        </a>
+      </div>-->
       </div>
     </div>
   </div>
