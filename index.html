@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Landing Page</title>
-  <link rel="stylesheet" href="/Styles/styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRChat Community Warning List</title>
+  <link rel="stylesheet" href="Styles/styles.css" />
+  <meta name="description" content="Community maintained list of problematic VRChat users">
 </head>
 <body>
+  <!-- Warning Banner -->
+  <div class="warning-banner">
+    ⚠️ WARNING: This site contains information about problematic behavior in the VRChat community.
+  </div>
 
-  <!-- Snow Effect Canvas -->
-  <div id="snow"></div>
-
-  <!-- Audio Autoplay -->
-  <embed src="musicfile" width="0" height="0" autostart="true" loop="true" hidden />
-
-  <!-- Intro Logo Animation Overlay -->
-  <div class="intro-overlay" onclick="enterSite()">
-  <img src="assets/landingpage/logo.png" alt="Logo" class="intro-logo" />
-  
-</div>
+  <!-- Fixed Header -->
+  <header class="fixed-header">
+    <div class="logo">
+      <img src="Asset/logo.webp" alt="Site Logo" />
+    </div>
+    <div class="logo-subtext">Community Maintained Warning List</div>
+    <div class="logo-subtext">For issues, please contact VRChat Trust & Safety team</div>
+  </header>
 
   <!-- Fixed Header with Logo and Subtext -->
   <div class="fixed-header">
@@ -29,10 +31,9 @@
     <div class="logo-subtext">Got a problem? Talk to Tupper!</div>
   </div>
 
-  <!-- Scrollable User Cards ONLY -->
-  <div class="scroll-frame">
-    <div class="scrollable-content">
-      <div class="card-container">
+  <!-- Main Content -->
+  <main class="content-container">
+    <div class="card-container">
         <!-- USER CARD -->
         <div class="card-wrapper">
         <div class="clown-wig"></div>

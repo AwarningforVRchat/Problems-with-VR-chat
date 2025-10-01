@@ -6,13 +6,15 @@
 }
 
 html, body {
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Segoe UI", Arial, sans-serif;
   background: #0d0d0d;
   color: #e5e5e5;
-  text-align: center;
-  overflow: hidden; /* weâ€™ll handle scrolling manually */
-  position: relative;
+  line-height: 1.6;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* --- SNOW CANVAS --- */
@@ -60,43 +62,94 @@ html, body {
 /* --- FIXED HEADER --- */
 .fixed-header {
   position: fixed;
-  top: 0;
+  top: 50px;
   width: 100%;
   z-index: 5;
   background: #0d0d0d;
-  padding-top: 40px;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .logo img {
-  max-width: 280px;
+  max-width: 200px;
   height: auto;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 6px #6200ff88);
+  margin-bottom: 15px;
 }
 
 .logo-subtext {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
+  margin: 10px 0;
+  font-size: 1.2rem;
   color: #bbbbbb;
-  text-shadow: 0 0 6px #6200ff;
+  text-shadow: 0 0 3px rgba(98, 0, 255, 0.5);
 }
 
-/* --- SCROLLABLE SECTION BELOW HEADER --- */
-.scroll-frame {
-  position: absolute;
-  top: 320px; /* leave space for header */
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow-y: auto;
-  z-index: 8;
-  padding-bottom: 100px;
+/* --- WARNING BANNER --- */
+.warning-banner {
+  background: #ff0000;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* Hide scrollbars */
-.scroll-frame::-webkit-scrollbar {
-  display: none;
+/* --- CONTENT CONTAINER --- */
+.content-container {
+  margin-top: 200px;
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- CARD STYLES --- */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.card .caption {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.card .desc {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 10px;
 }
 .scroll-frame {
   scrollbar-width: none;
