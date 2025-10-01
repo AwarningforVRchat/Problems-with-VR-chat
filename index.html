@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="/Styles/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+  <!-- Snow Effect Canvas -->
+  <div id="snow"></div>
+
+  <!-- Audio Autoplay -->
+  <embed src="musicfile" width="0" height="0" autostart="true" loop="true" hidden />
+
+  <!-- Intro Logo Animation Overlay -->
+  <div class="intro-overlay" onclick="enterSite()">
+  <img src="assets/landingpage/logo.png" alt="Logo" class="intro-logo" />
+  
+</div>
+
+  <!-- Fixed Header with Logo and Subtext -->
+  <div class="fixed-header">
+    <div class="logo">
+      <img src="assets/landingpage/logo.png" alt="Logo" />
+    </div>
+    <div class="logo-subtext">Verified Autistic Wierdos of VRChat located here!!!</div>
+    <div class="logo-subtext">Got a problem? Talk to Tupper!</div>
+  </div>
+
+  <!-- Scrollable User Cards ONLY -->
+  <div class="scroll-frame">
+    <div class="scrollable-content">
+      <div class="card-container">
+        <!-- USER CARD -->
+        <div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Price/index.html" class="card">
+          <img src="assets/Price/pic.png" alt="Price" />
+          <div class="caption">Price</div>
+          <p class="desc">Owner of Coffin / Laughing Coffin / CP lover / Child Extorter.</p>
+        </a>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/AzukiFumiko/index.html" class="card">
+          <img src="assets/AzukiFumiko/pic.png" alt="Azuki Fumiko" />
+          <div class="caption">Azuki Fumiko</div>
+          <p class="desc">Owner of FBT haven, has little anime girls on his car.</p>
+        </a>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/TechGangster/index.html" class="card">
+          <img src="assets/TechGangster/techgangster.png" alt="User 3" />
+          <div class="caption">Tech Gangster</div>
+          <p class="desc">Crackhead, Pedophile, Drug addict.</p>
+        </a>
+      </div>
+
+      <!-- CARD 4 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Sin/index.html" class="card">
+          <img src="assets/user4/pic.jpg" alt="User 4" />
+          <div class="caption">Sin</div>
+          <p class="desc">Input discription of sin here</p>
+        </a>
+      </div>-->
+      
+      <!-- CARD 5 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Rome/index.html" class="card">
+          <img src="assets/user5/pic.jpg" alt="User 5" />
+          <div class="caption">Rome</div>
+          <p class="desc">Discription for rome here</p>
+        </a>
+      </div>-->
+
+      <!-- CARD 6 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Ketoski/index.html" class="card">
+          <img src="assets/user6/pic.jpg" alt="User 6" />
+          <div class="caption">Ketoski</div>
+          <p class="desc">discription for Ketoski</p>
+        </a>
+      </div>-->
+
+      <!-- CARD 7 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Fatherhoodie/index.html" class="card">
+          <img src="assets/user7/pic.jpg" alt="User 7" />
+          <div class="caption">FatherHoodie</div>
+          <p class="desc">FatherHoodie discription here</p>
+        </a>
+      </div>-->
+
+      <!-- CARD 8 -->
+      <div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Cherry/index.html" class="card">
+          <img src="/assets/Cherry/cherryface.png" alt="User 8" />
+          <div class="caption">Cherry</div>
+          <p class="desc">Banned from DB for showing her pussy to moderators. Lolcow. </p>
+        </a>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Cryption/index.html" class="card">
+          <img src="assets/Cryption/grillz.png" alt="User 9" />
+          <div class="caption">Cryption</div>
+          <p class="desc">Closeted troon that glazed LC while nuking discord servers at school and rating loli hentai.</p>
+        </a>
+      </div>
+
+      <!-- CARD 9 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Blepsi/index.html" class="card">
+          <img src="assets/user4/pic.jpg" alt="User 9" />
+          <div class="caption">Blepsi</div>
+          <p class="desc">Blepsi disription here</p>
+        </a>
+      </div>-->
+      
+            <!-- CARD 10 -->
+      <div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Evakitty/index.html" class="card">
+          <img src="assets/Evakitty/evaface.png" alt="User 10" />
+          <div class="caption">Evakitty</div>
+          <p class="desc">Eva Dögg Heðinsdottir, 30+ yr old erper that cant keep their hands off kids</p>
+        </a>
+      </div>
+
+               <!-- CARD 11 -->
+      <div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/AshDemonic/index.html" class="card">
+          <img src="assets/AshDemonic/ashdemonicface.png" alt="User 11" />
+          <div class="caption">Ash Demonic </div>
+          <p class="desc">Fat com whale that keeps coming back after being caught dming and sexting as many minors as she possible can.</p>
+        </a>
+      </div>
+
+                  <!-- CARD 12 -->
+      <div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Ravensthebaddie/index.html" class="card">
+          <img src="assets/Ravensthebaddie/ravenface.png" alt="User 12" />
+          <div class="caption">Ravensthebaddie</div>
+          <p class="desc">Gigantic lard that preaches "romeo and juliet" laws.</p>
+        </a>
+      </div>
+
+                  <!-- CARD 13 -->
+      <div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/QueenV/index.html" class="card">
+          <img src="assets/QueenV/QueenV.png" alt="User 13" />
+          <div class="caption">QueenV</div>
+          <p class="desc">Thinks Its not child porn if they're doing it on VRChat.</p>
+        </a>
+      </div>
+
+                  <!-- CARD 14 -->
+      <div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Silverdragongod/index.html" class="card">
+          <img src="assets/Silverdragongod/silverface.png" alt="User 14" />
+          <div class="caption">Silverdragongod</div>
+          <p class="desc">Nasty Pred That Loves Them 12+ years.</p>
+        </a>
+      </div>
+
+                  <!-- CARD 15 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Drakoni/index.html" class="card">
+          <img src="assets/user4/pic.jpg" alt="User 15" />
+          <div class="caption">Drakoni</div>
+          <p class="desc">Drakoni Discription</p>
+        </a>
+      </div>-->
+
+                  <!-- CARD 16 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Temple/index.html" class="card">
+          <img src="assets/user4/pic.jpg" alt="User 16" />
+          <div class="caption">Temple</div>
+          <p class="desc">Temple discription here</p>
+        </a>
+      </div>-->
+
+
+                  <!-- CARD 17 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/Kuro/index.html" class="card">
+          <img src="assets/user4/pic.jpg" alt="User 17" />
+          <div class="caption">Kuro</div>
+          <p class="desc">Kuro discription</p>
+        </a>
+      </div>-->
+
+
+                  <!-- CARD 18 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/user18" class="card">
+          <img src="assets/user4/pic.jpg" alt="User 18" />
+          <div class="caption">fathead</div>
+          <p class="desc">a really stupid fat idiot here</p>
+        </a>
+      </div>-->
+
+                  <!-- CARD 19 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/user19" class="card">
+          <img src="assets/user4/pic.jpg" alt="User 19" />
+          <div class="caption">fathead</div>
+          <p class="desc">a really stupid fat idiot here</p>
+        </a>
+      </div>-->
+
+                  <!-- CARD 20 -->
+      <!--<div class="card-wrapper">
+        <div class="clown-wig"></div>
+        <a href="/People/user/user20" class="card">
+          <img src="assets/user4/pic.jpg" alt="User 20" />
+          <div class="caption">fathead</div>
+          <p class="desc">a really stupid fat idiot here</p>
+        </a>
+      </div>-->
+        <!-- Add more user cards here -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    particlesJS("snow", {
+      particles: {
+        number: { value: 100 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.7 },
+        size: { value: 3 },
+        move: {
+          direction: "bottom",
+          speed: 1,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false },
+          onclick: { enable: false }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+  <script>
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelector('.intro-overlay').style.display = 'none';
+  }, 2000);
+});
+</script>
+</body>
+</html>
